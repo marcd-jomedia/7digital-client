@@ -289,6 +289,7 @@ class ApiClient
 
         $oauthFactory = new OauthFactory();
         $oauth = $oauthFactory->create(1.0, $this->config);
+        $params['usagetypes']='subscriptionStreaming';
         $requestUrl = $oauth->signRequest('GET', $path, $params);
         return $requestUrl;
     }
